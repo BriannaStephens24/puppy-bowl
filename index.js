@@ -29,6 +29,10 @@ const createDropdownForm = () => {
   form.innerText = 'Choose a player: ';
   const select = document.createElement('select');
 
+  const initialOption = document.createElement('option');
+  initialOption.innerText = `Select a puppy`
+  select.append(initialOption)
+
   state.allPuppiesInPuppyBowl.forEach((individualPuppy) => {
     const option = document.createElement('option');
     option.innerText = individualPuppy.name;
